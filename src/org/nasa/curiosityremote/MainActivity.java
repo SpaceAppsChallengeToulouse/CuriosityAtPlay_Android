@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import orders.ActionOrder;
+import orders.ActionOrder.Type;
 import orders.MoveOrder;
 import orders.Order;
 import orders.RotateOrder;
@@ -90,6 +92,20 @@ public class MainActivity extends Activity
 			orders.add(new RotateOrder(0));
 			updateList();
 			return true;
+		case R.id.menu_item_laser:
+			orders.add(new ActionOrder(ActionOrder.Type.LASER));
+			updateList();
+			return true;
+		case R.id.menu_item_dig:
+			orders.add(new ActionOrder(ActionOrder.Type.DIG));
+			updateList();
+			return true;
+		case R.id.menu_item_cam:
+			orders.add(new ActionOrder(ActionOrder.Type.CAM));
+			updateList();
+			return true;
+		case R.id.menu_item_go:
+			return true;
 		default:
 			return false;
 		}
@@ -105,6 +121,7 @@ public class MainActivity extends Activity
 	            listView.setSelection(adapter.getCount() - 1);
 	        }
 	    });
+		scheduleSendProgram();
 	}
 	
 	private void scheduleSendProgram()
@@ -155,7 +172,7 @@ public class MainActivity extends Activity
 			}
 			ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView1);
 			SeekBar seekBar = (SeekBar) convertView.findViewById(R.id.seekBar1);
-			
+			seekBar.setVisibility(View.VISIBLE);
 			convertView.findViewById(R.id.buttonDelete).setOnClickListener(new OnClickListener()
 			{
 				
@@ -167,7 +184,32 @@ public class MainActivity extends Activity
 			});
 			final TextView tv = (TextView) convertView.findViewById(R.id.textView1);
 			Order order = orders.get(pos);
-			if (order instanceof MoveOrder)
+			
+			if (order instanceof ActionOrder)
+			{
+				int res = 0;
+				String text = "";
+				switch (((ActionOrder) order).getType()) {
+				case LASER:
+					res = R.drawable.icon_laser;
+					text = "Tir ChemCam";
+					break;
+				case DIG:
+					res = R.drawable.camera;
+					text = "Forage roche";
+					break;
+				case CAM:
+					res = R.drawable.camera;
+					text = "Caméra panoramique";
+					break;
+				default:
+					break;
+				}
+				tv.setText(text);
+				imageView.setImageResource(res);
+				seekBar.setVisibility(View.INVISIBLE);
+			}
+			else if (order instanceof MoveOrder)
 			{
 				final MoveOrder moveOrder = (MoveOrder) order;
 				float distance = moveOrder.distance;

@@ -175,11 +175,13 @@ containing a value of this type.
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int card=0x7f020000;
-        public static final int drag=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int rotate=0x7f020003;
-        public static final int up_arrow=0x7f020004;
+        public static final int camera=0x7f020000;
+        public static final int card=0x7f020001;
+        public static final int drag=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int icon_laser=0x7f020004;
+        public static final int rotate=0x7f020005;
+        public static final int up_arrow=0x7f020006;
     }
     public static final class id {
         public static final int buttonDelete=0x7f040007;
@@ -188,6 +190,10 @@ containing a value of this type.
         public static final int handle=0x7f040006;
         public static final int imageView1=0x7f040009;
         public static final int listView=0x7f040005;
+        public static final int menu_item_cam=0x7f04000f;
+        public static final int menu_item_dig=0x7f04000d;
+        public static final int menu_item_go=0x7f040010;
+        public static final int menu_item_laser=0x7f04000e;
         public static final int menu_item_move=0x7f04000b;
         public static final int menu_item_rotate=0x7f04000c;
         public static final int onDown=0x7f040002;

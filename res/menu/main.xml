@@ -7,4 +7,23 @@
         android:title="Tourner" 
         android:icon="@drawable/rotate"
         android:showAsAction="always"/>
+    <item android:title="Actions"
+        android:showAsAction="always"
+        >
+        <menu >
+            <item android:id="@+id/menu_item_dig"
+        android:title="Forage" 
+        android:icon="@drawable/rotate"/>
+            <item android:id="@+id/menu_item_laser"
+        android:title="Laser" 
+        android:icon="@drawable/icon_laser"/>
+            <item android:id="@+id/menu_item_cam"
+        android:title="Camera" 
+        android:icon="@drawable/camera"/>
+        </menu>
+    </item>
+    <item android:id="@+id/menu_item_go"
+        android:title="Go !"
+        android:showAsAction="always"
+         />
 </menu>
