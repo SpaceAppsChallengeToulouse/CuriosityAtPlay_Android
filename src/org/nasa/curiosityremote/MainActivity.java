@@ -192,7 +192,7 @@ public class MainActivity extends Activity
 					text = "Tir ChemCam";
 					break;
 				case DIG:
-					res = R.drawable.camera;
+					res = R.drawable.drill;
 					text = "Forage roche";
 					break;
 				case CAM:

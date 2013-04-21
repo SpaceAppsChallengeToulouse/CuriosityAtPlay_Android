@@ -13,7 +13,7 @@
         <menu >
             <item android:id="@+id/menu_item_dig"
         android:title="Forage" 
-        android:icon="@drawable/rotate"/>
+        android:icon="@drawable/drill"/>
             <item android:id="@+id/menu_item_laser"
         android:title="Laser" 
         android:icon="@drawable/icon_laser"/>

@@ -64,7 +64,7 @@ class ActionOrder extends Order
     int index = 0; 
     switch (action) {
        case DIG:
-         index = 0;
+         index = 2;
          break;
        case LASER:
          index = 1;

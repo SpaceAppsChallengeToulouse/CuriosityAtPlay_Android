@@ -20,6 +20,7 @@ void setup()
   actions = new PImage[3];
   actions[0] = loadImage("camera.png");
   actions[1] = loadImage("icon_laser.png");
+  actions[2] = loadImage("drill.png");
   strokeCap(ROUND);
   
   size(W, H);
