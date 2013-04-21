@@ -134,9 +134,6 @@ public class MainActivity extends Activity
 		
 		public OrderSequenceAdapter()
 		{
-			orders.add(new MoveOrder(5));
-			orders.add(new RotateOrder(10));
-			orders.add(new MoveOrder(10));
 		}
 
 		@Override
