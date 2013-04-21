@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/menu_item_move"
+        android:title="Déplacer" 
+        android:icon="@drawable/up_arrow"
+        android:showAsAction="always"/>
+    <item android:id="@+id/menu_item_rotate"
+        android:title="Tourner" 
+        android:icon="@drawable/rotate"
+        android:showAsAction="always"/>
+</menu>
